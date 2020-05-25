@@ -8,7 +8,7 @@ Website about mental arithmetic training.
   - expert : hard + modulo
   
 The modulo is the rest of an euclidian division.
-Ex: 10 modulo 3  or 10 % 3  = 1   
+  - Ex: 10 modulo 3  or 10 % 3  = 1   
 
 
 
