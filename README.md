@@ -1,7 +1,7 @@
 # MentaRithmetic
 Website about mental arithmetic training.
 
-##4 difficulties : 
+## 4 difficulties : 
   - easy : addition and subtraction
   - medium : easy + multiplication
   - hard : medium + division
