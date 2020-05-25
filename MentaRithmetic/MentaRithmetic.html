@@ -78,22 +78,32 @@
 	  		<a href="#" id="time" class = "b2 btnTime btnGame btn-white btn-animated">Time</a>
 	  		<a href="#" id="perso" class = "b3 btnPerso btnGame btn-white btn-animated">Perso</a>
 
-	  		<div id="timer"></div>
-			<div id="score"></div>
+
 		</div>
 
 
 
 
 		<div class="rectangle" id="rect" >
-			<div id="affichage"></div>
+
+	  		<div class="infoTimer">
+	  			<a id="timer"></a>
+			</div>
+
+			<div id="affichage" onclick="cheat()"></div>
 
 			<form name="answer" class="search-wrapper cf">
 	       		<input type="text" style="box-shadow: none"  id="result" autocomplete="off">
+	       		<!--<img id="skip" onclick="cheat()" src="./pictures/skip.png" alt="Skip button">-->
 	       		<button type="submit" class="answerBtn" id="answer">answer</button>
 	    	</form>
+	    	<!--<button type="button" id="skip" onclick="cheat()">Skip</button>-->
+
+	       		<p id="score">Score : 0</p>
 
 		</div>
+
+
 
 	</div>
 

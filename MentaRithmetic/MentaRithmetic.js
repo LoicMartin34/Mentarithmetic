@@ -17,7 +17,9 @@ const answerBtn = document.querySelector('.answerBtn');
 
 
 
-var actualColor = "#64b5f6"
+var actualColor = "#2196f3"
+var actualColorBtn = "#64b5f6"
+
 document.body.style.background = "#2196f3";
 
 
@@ -30,6 +32,7 @@ btnContainer.addEventListener('click', (e) => {
     	changeIcon(0, 3, 2, 1);
     	chooseDifficulty('easy');
    	 	actualColor = "#2196f3";
+   	 	actualColorBtn = "#64b5f6"
   	}
   	if(e.target === greenBtn || e.target === greenLogo) {
   		document.body.style.background = "#4caf50";
@@ -38,6 +41,7 @@ btnContainer.addEventListener('click', (e) => {
    		changeIcon(1, 0, 2, 3);
     	chooseDifficulty('intermediate');
     	actualColor = "#4caf50";
+   	 	actualColorBtn = "#81c784"
 	}
   	if(e.target === yellowBtn || e.target === yellowLogo) {
   	  	document.body.style.background = "#ffb300";
@@ -46,6 +50,8 @@ btnContainer.addEventListener('click', (e) => {
    		changeIcon(2, 0, 3, 1);
     	chooseDifficulty('hard');
     	actualColor = "#ffb300";
+   	 	actualColorBtn = "#ffca28"
+
 	}
   	if(e.target === redBtn  || e.target === redLogo) {
    		document.body.style.background = "#e53935";
@@ -54,6 +60,7 @@ btnContainer.addEventListener('click', (e) => {
     	changeIcon(3, 0, 2, 1);
     	chooseDifficulty('veryhard');
     	  actualColor = "#e53935";
+   	 	  actualColorBtn = "#ef5350"
   	}
 
 });
@@ -156,12 +163,10 @@ function play(){
 
 	console.log("Operators available are " + operators)
 
-	console.log("je suis ici : ")
-
 	if(gamemode == "train"){
 		train(operators)
 	}else if (gamemode == "time"){
-		countdown(10000)
+		countdown(100)
 		time(operators)
 	}
 
@@ -172,6 +177,7 @@ answerBtn.addEventListener('click', (e) => {
 });
 
 function train(operators){
+	//setDisplay("skip","block")
 	//setDisplay("timer","none")
 	//setDisplay("score","none")
 
@@ -231,11 +237,33 @@ function train(operators){
 						answerUser = false*/
 }
 
+let answerSkip = document.getElementById("affichage");
+  
+// Ce gestionnaire ne sera exécuté qu'une fois
+// lorsque le curseur se déplace sur la liste
+answerSkip.addEventListener("mouseenter", function( event ) {   
+
+	if(gamemode == "train"){
+  		// on met l'accent sur la cible de mouseenter
+  		event.target.innerHTML = rightAnswer
+  		event.target.style.color = actualColorBtn;
+
+  		// on réinitialise la couleur après quelques instants
+  		setTimeout(function() {
+  			event.target.innerHTML = int1 + operators[indiceO] + int2
+    		event.target.style.color = "#ffffff";
+  		}, 500);
+	}else{
+		console.log("Cheater!!!!!!")
+	}
+}, false);
+
 
 function time(operators){
+	//setDisplay("skip","none")
 	setDisplay("timer","block")
 	setDisplay("score","block")
-	document.getElementById("score").innerHTML = score;
+	document.getElementById("score").innerHTML = "Score : " + score;
 
 
 	
@@ -270,7 +298,7 @@ answerBtn.addEventListener('click', (e) => {
 	document.getElementById('result').value = ""
 	if(answerUser==rightAnswer){
 		score += 1
-		document.getElementById("score").innerHTML = score;
+		document.getElementById("score").innerHTML = "Score : " + score;
 		console.log("Bravo")
 		document.getElementById('result').value = ""
 		train(operators)
@@ -379,7 +407,7 @@ function countdown(time){
       		countdown(time);
     	}, 1000);
 	}else{
-		document.getElementById("timer").innerHTML = "0";
+		document.getElementById("timer").innerHTML = "Score : " + score;
 		setDisplay("rect","none");
 	}
 }
@@ -387,5 +415,6 @@ function countdown(time){
 
 
 
-/*--------------SCORE--------------*/
 
+
+/*--------------SCORE--------------*/
