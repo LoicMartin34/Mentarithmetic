@@ -10,6 +10,14 @@ Website about mental arithmetic training.
 The modulo is the rest of an euclidian division.
   - Ex: 10 modulo 3  or 10 % 3  = 1   
 
+10|3
+ 9|___
+__|3
+ 1|
+  
+  
+
+
 
 
 
