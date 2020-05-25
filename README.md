@@ -1,4 +1,4 @@
-# MentaRithmetic
+# MentaRithmetic - Work in progress
 Website about mental arithmetic training.
 
 ## 4 difficulties : 
