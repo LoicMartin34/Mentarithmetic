@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MentaRithmetic</title>
+    <link rel="stylesheet" type="text/css" href="MentaRithmetic.css">
+	<script src="https://kit.fontawesome.com/2ade548b63.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+
+
+	<!--Welcome on MentaRithmetic!-->
+
+
+	<!--<div id="difficulty">
+		<button type="button" onclick="chooseDifficulty('easy')">
+		    Easy
+		</button>
+		<button type="button" onclick="chooseDifficulty('intermediate')">
+		    Intermediate
+		</button>
+		button type="button" onclick="chooseDifficulty('hard')">
+		    Hard
+		</button>
+		<button type="button" onclick="chooseDifficulty('veryhard')">
+		    VeryHard
+		</button>
+	</div>-->
+
+	<!--<div id="gamemode">
+		<button type="button" onclick="chooseGamemode('train')">
+		    Train
+		</button>
+		<button type="button" onclick="chooseGamemode('time')">
+		    Time
+		</button>
+	</div>-->
+
+	<!--<div id="start">
+		<button type="button" onclick="play()">
+		    Play
+		</button>
+	</div>-->
+	<div class="text title">
+
+	<!--<div id="logo">
+	    <span class="word blueTitle">+</span>
+	    <span class="word greenTitle">×</span>
+	    <span class="word redTitle">÷</span>
+	    <span class="word yellowTitle">%</span>
+	</div>-->
+
+	  <p class="wrapper">M3NT4R1THM3T1C</p>
+	</div>
+
+
+
+	<div id="btn-container" class="background blue-bg">
+
+	  <div class="btn blue-btn active">
+	    <div class="blue-logo fas fa-plus icon active"></div>
+	  </div>
+	  <div class="btn green-btn">
+	    <p class="green-logo fas fa-times icon"></p>
+	  </div>
+	  <div class="btn yellow-btn">
+	    <p class="yellow-logo fas fa-divide icon"></p>
+	  </div>
+	  <div class="btn red-btn">
+	    <p class="red-logo fas fa-percentage icon"></p>
+	  </div>
+
+
+
+
+		<div class = "container-button">
+	  		<a href="#" id="train" class = "b1 btnTrain btnGame btn-white btn-animated">Train</a>	
+	  		<a href="#" id="time" class = "b2 btnTime btnGame btn-white btn-animated">Time</a>
+	  		<a href="#" id="perso" class = "b3 btnPerso btnGame btn-white btn-animated">Perso</a>
+
+
+		</div>
+
+
+
+
+		<div class="rectangle" id="rect" >
+
+	  		<div class="infoTimer">
+	  			<a id="timer"></a>
+			</div>
+
+			<div id="affichage"></div>
+
+			<form name="answer" class="search-wrapper cf" onsubmit="return false">
+	       		<input type="text" style="box-shadow: none"  id="result" autocomplete="off">
+	       		<button type="submit" class="answerBtn" id="answer">answer</button>
+	    	</form>
+
+	       		<p id="score">Score : 0</p>
+
+		</div>
+
+
+
+	</div>
+
+
+
+
+
+  	<script src="MentaRithmetic.js"></script>
+  </body>
+</html>
