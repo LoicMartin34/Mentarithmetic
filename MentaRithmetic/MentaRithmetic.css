@@ -21,27 +21,48 @@
   /*height: 90vh;*/
   display: flex;
   justify-content: center;
-  /*align-items: center;/*Ligne permettant de modifier la hauteur des boutons*/
-  align-items: 10px;
   transition: 0.2s;
 }
 
-.btn {
-  width: 75px;
-  height: 75px;
-  background: #FFF;
-  margin: 0.5rem;
-  margin-top: 5%;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
-  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
-  cursor: pointer;
-  transition: width 0.3s cubic-bezier(.36,.15,.21,1.94), background 0.3s;
+@media only screen and (min-width: 720px) and (max-width: 1280px) {
+  .btn {
+    width: 50px;
+    height: 50px;
+    background: #FFF;
+    margin: 0.5rem;
+    margin-top: 5%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: width 0.3s cubic-bezier(.36,.15,.21,1.94), background 0.3s;
+  } 
 }
+
+@media only screen and (min-width: 1920px) and (max-width: 1920px){
+  .btn {
+    width: 75px;
+    height: 75px;
+    background: #FFF;
+    margin: 0.5rem;
+    margin-top: 5%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: width 0.3s cubic-bezier(.36,.15,.21,1.94), background 0.3s;
+  }
+}
+
+
 
 .icon {
   font-size: 2rem;
@@ -106,23 +127,22 @@
   }
 }
 
-@media only screen and (max-width: 410px) {
-  .btn {
-  width: 60px;
-  height: 60px;
-  margin: 0.3rem;
-  }
-  
-  .icon {
-  font-size: 1rem;
-  }
-  
-  .btn.active {
-  width: 100px;
-  }
+
+
+
+@media only screen and (min-width: 720px) and (max-width: 1280px) {
+  .container-button{
+    width:50%;
+    position: absolute;
+    top: 5%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top:18rem;
+  } 
 }
 
-
+@media only screen and (min-width: 1920px) and (max-width: 1920px){
 
 .container-button{
   width:50%;
@@ -132,10 +152,12 @@
   transform: translate(-50%, -50%);
   text-align: center;
   margin-top:18rem;
+  }
+
 }
 
-.btnGame:link,
-.btnGame:visited{
+/*.btnGame:link,
+.btnGame:visited*/.btnGame{
    text-transform: uppercase;/*Code pour mettre le texte en majuscule*/
    text-decoration: none;
    padding: 1rem 3rem;
@@ -245,13 +267,24 @@
   margin-left: 10%;
 
 }*/
+@media only screen and (min-width: 720px) and (max-width: 1280px) {
 
-.search-wrapper {
-  width: 50%;
-  margin: 10% auto;    
-  border-radius: 40px;
-  background: transparent;
+  .search-wrapper {
+    width: 60%;
+    margin: 10% auto;    
+    border-radius: 40px;
+    background: transparent;
+  }
+}
 
+@media only screen and (min-width: 1920px) and (max-width: 1920px) {
+
+  .search-wrapper {
+    width: 50%;
+    margin: 10% auto;    
+    border-radius: 40px;
+    background: transparent;
+  }
 }
 
 /* Form text input */
@@ -343,18 +376,7 @@
 
 /*--------------TITLE--------------*/
 
-/*.title {
-
-  font-weight: 600;
-  font-size: 40px;
-  position: absolute;
-  width: 450px;
-  padding-left: 50%;
-  padding-right: 50%;
-  background: white;
-}*/
 .text {
-  opacity: 500%;
   text-align: center;
   font-size: 50px;
 
@@ -449,7 +471,22 @@
 
 /*--------------Affichage Calcul--------------*/
 
-#affichage{
+@media only screen and (min-width: 720px) and (max-width: 1280px) {
+
+  #affichage{
+  margin-top: 30%;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: white;
+  color : white;
+  font-family: "Fredoka One";
+  font-size: 50px;
+  }
+}
+
+@media only screen and (min-width: 1920px) and (max-width: 1920px) {
+
+  #affichage{
   margin-top: 10%;
   border-style: solid;
   border-radius: 20px;
@@ -457,8 +494,9 @@
   color : white;
   font-family: "Fredoka One";
   font-size: 100px;
-
+  }
 }
+
 
 
 

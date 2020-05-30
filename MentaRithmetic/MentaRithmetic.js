@@ -32,7 +32,7 @@ btnContainer.addEventListener('click', (e) => {
     	changeIcon(0, 3, 2, 1);
     	chooseDifficulty('easy');
    	 	actualColor = "#2196f3";
-   	 	actualColorBtn = "#64b5f6"
+   	 	actualColorBtn = "#64b5f6";
   	}
   	if(e.target === greenBtn || e.target === greenLogo) {
   		document.body.style.background = "#4caf50";
@@ -172,9 +172,9 @@ function play(){
 
 }
 
-answerBtn.addEventListener('click', (e) => {
+/*answerBtn.addEventListener('click', (e) => {
 	
-});
+});*/
 
 function train(operators){
 	//setDisplay("skip","block")
@@ -250,7 +250,7 @@ answerSkip.addEventListener("mouseenter", function( event ) {
 
   		// on réinitialise la couleur après quelques instants
   		setTimeout(function() {
-  			event.target.innerHTML = int1 + operators[indiceO] + int2
+  			event.target.innerHTML = int1 + ' ' + operators[indiceO] + ' ' + int2
     		event.target.style.color = "#ffffff";
   		}, 500);
 	}else{
@@ -293,18 +293,36 @@ function time(operators){
 }
 
 answerBtn.addEventListener('click', (e) => {
-	answerUser = document.getElementById("result").value
-	console.log("result : " + rightAnswer)
-	document.getElementById('result').value = ""
-	if(answerUser==rightAnswer){
-		score += 1
-		document.getElementById("score").innerHTML = "Score : " + score;
-		console.log("Bravo")
+	if(gamemode=="train"){
+		answerUser = document.getElementById("result").value
+		console.log("result : " + rightAnswer)
 		document.getElementById('result').value = ""
-		train(operators)
-	}else{
-		console.log("Faux")
+		if(answerUser==rightAnswer){
+			console.log("Bravo")
+			//document.getElementById('result').value = ""
+			train(operators)
+		}else{
+			console.log("Faux")
+		}
 	}
+	else if(gamemode=="time"){
+		answerUser = document.getElementById("result").value
+		console.log("result : " + rightAnswer)
+		document.getElementById('result').value = ""
+		if(answerUser==rightAnswer){
+			score += 1
+			document.getElementById("score").innerHTML = "Score : " + score;
+			console.log("Bravo")
+			//document.getElementById('result').value = ""
+			time(operators)
+		}else{
+			console.log("Faux")
+		}		
+	}
+
+
+
+
 });
 
 

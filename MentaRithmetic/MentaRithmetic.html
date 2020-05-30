@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>MentaRithmetic</title>
     <link rel="stylesheet" type="text/css" href="MentaRithmetic.css">
@@ -90,14 +90,12 @@
 	  			<a id="timer"></a>
 			</div>
 
-			<div id="affichage" onclick="cheat()"></div>
+			<div id="affichage"></div>
 
-			<form name="answer" class="search-wrapper cf">
+			<form name="answer" class="search-wrapper cf" onsubmit="return false">
 	       		<input type="text" style="box-shadow: none"  id="result" autocomplete="off">
-	       		<!--<img id="skip" onclick="cheat()" src="./pictures/skip.png" alt="Skip button">-->
 	       		<button type="submit" class="answerBtn" id="answer">answer</button>
 	    	</form>
-	    	<!--<button type="button" id="skip" onclick="cheat()">Skip</button>-->
 
 	       		<p id="score">Score : 0</p>
 
@@ -111,6 +109,6 @@
 
 
 
-  	<script type="text/javascript" src="MentaRithmetic.js"></script>
+  	<script src="MentaRithmetic.js"></script>
   </body>
 </html>
