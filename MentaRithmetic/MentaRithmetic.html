@@ -6,7 +6,7 @@
 	<script src="https://kit.fontawesome.com/2ade548b63.js" crossorigin="anonymous"></script>
 
   </head>
-  <body>
+  <body onload="getLeaderboard()">
 
 
 	<!--Welcome on MentaRithmetic!-->
@@ -55,20 +55,36 @@
 
 
 
-	<div id="btn-container" class="background blue-bg">
 
-	  <div class="btn blue-btn active">
-	    <div class="blue-logo fas fa-plus icon active"></div>
-	  </div>
-	  <div class="btn green-btn">
-	    <p class="green-logo fas fa-times icon"></p>
-	  </div>
-	  <div class="btn yellow-btn">
-	    <p class="yellow-logo fas fa-divide icon"></p>
-	  </div>
-	  <div class="btn red-btn">
-	    <p class="red-logo fas fa-percentage icon"></p>
-	  </div>
+	<div id="btn-container" class="background blue-bg">
+		<div class="btn blue-btn active">
+	    	<div class="blue-logo fas fa-plus icon active"></div>
+	  	</div>
+	  	<div class="btn green-btn">
+	  		<p class="green-logo fas fa-times icon"></p>
+	  	</div>
+	  	<div class="btn yellow-btn">
+	    	<p class="yellow-logo fas fa-divide icon"></p>
+	  	</div>
+	  	<div class="btn red-btn">
+	    	<p class="red-logo fas fa-percentage icon"></p>
+	  	</div>
+	  	<div class="btn grey-btn">
+	    	<p class="grey-logo fas fa-question icon"></p>
+	  	</div>
+	  
+
+		<div id="params-container">
+			<input id="1" type="checkbox" name="checkbox" value="+"><label for="1"><p class="fas fa-plus choice"></p></label>
+		    <input id="2" type="checkbox" name="checkbox" value="-"><label for="2"><p class="fas fa-minus choice"></p></label>
+		    <input id="3" type="checkbox" name="checkbox" value="*"><label for="3"><p class="fas fa-times choice"></p></label>
+		    <input id="4" type="checkbox" name="checkbox" value="/"><label for="4"><p class="fas fa-divide choice"></p></label>
+		    <input id="5" type="checkbox" name="checkbox" value="%"><label for="5"><p class="fas fa-percentage choice"></p></label>
+
+			<p class="fas fa-arrow-circle-right" id="start" onClick="creation()"></p>
+
+		</div>
+
 
 
 
@@ -76,15 +92,13 @@
 		<div class = "container-button">
 	  		<a href="#" id="train" class = "b1 btnTrain btnGame btn-white btn-animated">Train</a>	
 	  		<a href="#" id="time" class = "b2 btnTime btnGame btn-white btn-animated">Time</a>
-	  		<a href="#" id="perso" class = "b3 btnPerso btnGame btn-white btn-animated">Perso</a>
-
-
+	  		<!--<a href="#" id="perso" class = "b3 btnPerso btnGame btn-white btn-animated">Perso</a>-->
 		</div>
 
 
 
 
-		<div class="rectangle" id="rect" >
+		<div class="rectangle" id="rect">
 
 	  		<div class="infoTimer">
 	  			<a id="timer"></a>
@@ -92,18 +106,20 @@
 
 			<div id="affichage"></div>
 
-			<form name="answer" class="search-wrapper cf" onsubmit="return false">
+			<form id="reponse" name="answer" class="search-wrapper cf" onsubmit="return false">
 	       		<input type="text" style="box-shadow: none"  id="result" autocomplete="off">
 	       		<button type="submit" class="answerBtn" id="answer">answer</button>
 	    	</form>
 
-	       		<p id="score">Score : 0</p>
+			<div id="score">Score : 0</div>
 
 		</div>
 
 
-
 	</div>
+
+		<div class="leaderboard"></div>
+
 
 
 

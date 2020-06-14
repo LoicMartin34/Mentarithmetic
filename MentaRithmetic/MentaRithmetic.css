@@ -9,6 +9,8 @@
   --yellow-bg: #ffb300;
   --green-btn: #81c784;
   --green-bg: #4caf50;
+  --grey-btn: #a1a1a1;
+  --grey-bg: #777777;
 }
 
 * {
@@ -43,7 +45,7 @@
   } 
 }
 
-@media only screen and (min-width: 1920px) and (max-width: 1920px){
+@media only screen and (min-width: 1281px){
   .btn {
     width: 75px;
     height: 75px;
@@ -67,6 +69,11 @@
 .icon {
   font-size: 2rem;
   color: #7d7d7d;
+}
+
+.choice {
+  font-size: 1rem;
+  color: white;
 }
 
 .btn.active {
@@ -111,6 +118,10 @@
   background: var(--green-btn);
 }
 
+.grey-btn.active {
+  background: var(--grey-btn);
+}
+
 @media only screen and (max-width: 550px) {
   .btn {
   width: 80px;
@@ -130,7 +141,7 @@
 
 
 
-@media only screen and (min-width: 720px) and (max-width: 1280px) {
+@media only screen and (min-width: 720px){
   .container-button{
     width:50%;
     position: absolute;
@@ -142,7 +153,7 @@
   } 
 }
 
-@media only screen and (min-width: 1920px) and (max-width: 1920px){
+@media only screen and (min-width: 1281px){
 
 .container-button{
   width:50%;
@@ -267,7 +278,7 @@
   margin-left: 10%;
 
 }*/
-@media only screen and (min-width: 720px) and (max-width: 1280px) {
+@media only screen and (min-width: 720px){
 
   .search-wrapper {
     width: 60%;
@@ -277,7 +288,7 @@
   }
 }
 
-@media only screen and (min-width: 1920px) and (max-width: 1920px) {
+@media only screen and (min-width: 1281px){
 
   .search-wrapper {
     width: 50%;
@@ -443,7 +454,7 @@
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: #ffffff;
   text-align: center;
-  font-size: 92px;
+  font-size: 100px;
   font-family: "Fredoka One";
   font-weight: 700;
   background: repeating-linear-gradient(to right, #64b5f6, #81c784, #ffca28, #ef5350, #64b5f6);
@@ -484,7 +495,7 @@
   }
 }
 
-@media only screen and (min-width: 1920px) and (max-width: 1920px) {
+@media only screen and (min-width: 1281px){
 
   #affichage{
   margin-top: 10%;
@@ -529,4 +540,91 @@
 #score{
   font-family: "Fredoka One";
   color: black;
+}
+
+
+
+/*--------------Affichage Params Gamemode Perso--------------*/
+
+#params-container{
+  margin-top: 15%;
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1280px) {
+  #params-container{
+    width:50%;
+    position: absolute;
+    top: 5%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top:18rem;
+  } 
+}
+
+@media only screen and (min-width: 1281px){
+
+  #params-container{
+    width:50%;
+    position: absolute;
+    top: 10%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top:18rem;
+  }
+}
+
+
+#start{
+  font-size: 1.50em;
+}
+
+input[type=checkbox] + label {
+  /*display: block;*/
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+}
+
+/*input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}*/
+
+input[type=checkbox]:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+}
+
+
+
+/*--------------Affichage Leaderboard--------------*/
+
+.leaderboard{
+  margin-left: 10%;
+  color:white;
+  font-family: 'Fredoka One';
+  font-size: 1.5em;
+  text-shadow: 3px 3px 2px black;
+
 }
