@@ -44,7 +44,7 @@ btnContainer.addEventListener('click', (e) => {
     	//changeBg('green-bg', 'blue-bg', 'yellow-bg', 'red-bg');
     	changeBtn(greenBtn, blueBtn, yellowBtn, redBtn, greyBtn);
    		changeIcon(1, 0, 2, 3, 4);
-    	chooseDifficulty('intermediate');
+    	chooseDifficulty('medium');
     	actualColor = "#4caf50";
    	 	actualColorBtn = "#81c784";
 	}
@@ -63,7 +63,7 @@ btnContainer.addEventListener('click', (e) => {
     	//changeBg('red-bg', 'blue-bg', 'yellow-bg', 'green-bg');
     	changeBtn(redBtn, blueBtn, yellowBtn, greenBtn, greyBtn);
     	changeIcon(3, 0, 2, 1, 4);
-    	chooseDifficulty('veryhard');
+    	chooseDifficulty('expert');
     	actualColor = "#e53935";
    	 	actualColorBtn = "#ef5350";
   	}
@@ -193,7 +193,7 @@ function play(){
 		operators = ['+', '-']
 		indice = 2;
 	} 
-	if(difficulty == "intermediate"){
+	if(difficulty == "medium"){
 		operators = ['+', '-', '*']
 		indice = 3
 	}
@@ -201,7 +201,7 @@ function play(){
 		 operators = ['+', '-', '*', '/']
 		 indice = 4
 	}
-	if(difficulty == "veryhard"){
+	if(difficulty == "expert"){
 		operators = ['+', '-', '*', '/', "%"] 
 		indice = 5
 	}
@@ -574,14 +574,14 @@ function countdown(time){
 	  		case 'easy':
 	    		leaderboard.setItem('BestScoreEasy', score);
 	    		break;
-	  		case 'intermediate':
-	 	    	leaderboard.setItem('BestScoreIntermediate', score);
+	  		case 'medium':
+	 	    	leaderboard.setItem('BestScoreMedium', score);
 	    		break;
 	  		case 'hard':
 	    		leaderboard.setItem('BestScoreHard', score);
 	    		break;
-	  		case 'veryhard':
-	    		leaderboard.setItem('BestScoreVeryhard', score);
+	  		case 'expert':
+	    		leaderboard.setItem('BestScoreExpert', score);
 	    		break;
 
 	    }
@@ -598,16 +598,16 @@ function countdown(time){
 
 function getLeaderboard(){
 	resultEasy = leaderboard.getItem('BestScoreEasy');
-	resultIntermediate = leaderboard.getItem('BestScoreIntermediate');
+	resultMedium = leaderboard.getItem('BestScoreMedium');
 	resultHard = leaderboard.getItem('BestScoreHard');
-	resultVeryHard = leaderboard.getItem('BestScoreVeryhard');
+	resultExpert = leaderboard.getItem('BestScoreExpert');
 
-	if(resultEasy!=null || resultIntermediate!=null || resultHard!=null || resultVeryHard!=null )
+	if(resultEasy!=null || resultMedium!=null || resultHard!=null || resultExpert!=null )
 	document.getElementsByClassName("leaderboard")[0].innerHTML = "Best Results : <br>";
 	if(resultEasy!=null) console.log("Easy : " + leaderboard.getItem('BestScoreEasy')), document.getElementsByClassName("leaderboard")[0].innerHTML += "<br> Easy : "+leaderboard.getItem('BestScoreEasy');
-	if(resultIntermediate!=null) console.log("Intermediate : " + leaderboard.getItem('BestScoreIntermediate')), document.getElementsByClassName("leaderboard")[0].innerHTML += "<br> Intermediate : "+leaderboard.getItem('BestScoreIntermediate');
+	if(resultMedium!=null) console.log("Medium : " + leaderboard.getItem('BestScoreMedium')), document.getElementsByClassName("leaderboard")[0].innerHTML += "<br> Medium : "+leaderboard.getItem('BestScoreMedium');
 	if(resultHard!=null) console.log("Hard : " + leaderboard.getItem('BestScoreHard')), document.getElementsByClassName("leaderboard")[0].innerHTML += "<br> Hard : "+leaderboard.getItem('BestScoreHard');
-	if(resultVeryHard!=null) console.log("Veryhard : " + leaderboard.getItem('BestScoreVeryhard')), document.getElementsByClassName("leaderboard")[0].innerHTML += "<br> Veryhard : "+leaderboard.getItem('BestScoreVeryhard');
+	if(resultExpert!=null) console.log("Expert : " + leaderboard.getItem('BestScoreExpert')), document.getElementsByClassName("leaderboard")[0].innerHTML += "<br> Expert : "+leaderboard.getItem('BestScoreExpert');
 }
 
 
