@@ -11,9 +11,13 @@ The modulo is the rest of an euclidian division.
   - Ex: 10 modulo 3  or 10 % 3  = 1   
 
 ## 3 game modes : 
-  - Train
-  - Time
-  - Perso
+  - Train :
+Training mode allows player to train himself on various calculations without constraints like time.
+  - Time :
+This gamemode is timed allowing the player to test his level, the score is saved to display the leaderboard.
+The leaderboard displays the best score on each difficulties.
+  - Perso :
+The latter is designed to create the perfect training. The player can select the operations wanted.  
 
   
 
